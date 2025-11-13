@@ -3,7 +3,7 @@ import os
 os.environ["GRPC_VERBOSITY"] = "NONE"
 os.environ["GLOG_minloglevel"] = "2"
 
-genai.configure(api_key="AIzaSyDUBHj48GewPtzog0PxxGRsrFZ-X_eqtyw")
+genai.configure(api_key="use you key here")
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
@@ -16,4 +16,5 @@ while True:
         break
     txt = str(response.text)
     txt = txt.replace("*", "")
+
     print(f"AI:{txt.strip()}")
